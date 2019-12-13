@@ -16,8 +16,9 @@ class CreatConfigurationsTable extends Migration
         Schema::create('configurations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id')->unsigned();
-            $table->string('week_start');
+            $table->string('week_start')->default('sunday');
             $table->integer('hours_per_day')->nullable();
+            $table->longText('expected_deliverable');
 
             $table->foreign('project_id')
                 ->references('id')->on('projects')

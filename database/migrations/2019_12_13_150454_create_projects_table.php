@@ -17,10 +17,11 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('duration')->nullable();
+            $table->string('cost')->nullable();
             $table->date('start_date');
             $table->date('end_date')->nullable();
-            $table->string('task_id');
-            $table->string('worker_id');
+            $table->string('task_id')->nullable();
+            $table->string('worker_id')->nullable();
 
             $table->timestamps();
         });
