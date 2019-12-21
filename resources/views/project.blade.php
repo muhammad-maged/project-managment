@@ -5,7 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">Project : {{$project->name}}</div>
+                    <div class="card-header">
+                        Project : {{$project->name}}
+                        <div class="float-right"><a href="{{route('projectPlan', $project->id)}}" class="btn btn-primary" style="color: white;">Project Plan</a></div>
+                    </div>
                     @if(session()->has('message'))
                         <div class="alert alert-success col-md-4" style="text-align: center; align-self: center;  margin: 10px;">
                             {{ session()->get('message') }}

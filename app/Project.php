@@ -13,6 +13,7 @@ class Project extends Model
         'cost',
         'start_date',
         'end_date',
+        'total_hours',
         'task_id',
         'worker_id',
     ];

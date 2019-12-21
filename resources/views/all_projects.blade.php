@@ -15,6 +15,7 @@
                             <th scope="col">Start Date</th>
                             <th scope="col">Due Date</th>
                             <th scope="col">Duration</th>
+                            <th scope="col">Total Hours</th>
                             <th scope="col">Cost</th>
                         </tr>
                         </thead>
@@ -26,6 +27,7 @@
                                 <td>{{$project->start_date}}</td>
                                 <td>{{$project->end_date}}</td>
                                 <td>{{$project->duration}}</td>
+                                <td>{{$project->total_hours}}</td>
                                 <td>{{$project->cost}}</td>
                             </tr>
                             @empty

@@ -26,6 +26,12 @@ Route::post('/add-project', 'ProjectController@createProject')->name('create-pro
 Route::post('/edit-project/{id}', 'ProjectController@editProject')->name('editProject-post');
 Route::get('/projects', 'ProjectController@viewProjects')->name('viewProjects');
 Route::get('/project/{id}', 'ProjectController@viewProject')->name('editProject');
+Route::get('/project-plan/{id}', 'ProjectController@projectPlan')->name('projectPlan');
+Route::post('/add-task', 'ProjectController@createTask')->name('createTask');
+Route::post('/project-days/{id}', 'ProjectController@postProjectHours')->name('postProjectHours');
+Route::get('/Task/{id}', 'ProjectController@editTask')->name('editTask');
+Route::post('/update-task', 'ProjectController@updateTask')->name('updateTask');
+Route::get('/delete-task/{id}', 'ProjectController@deleteTask')->name('deleteTask');
 
 
 
