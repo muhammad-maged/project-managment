@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    /**
+     * Calculate the average time to finish a task.
+     *
+     * @param int $size
+     * @return float
+     */
+    public function calculateAverageTime(int $size): float
+    {
+        return $size * 3.5;
+    }
 }
