@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/slack/integrate', 'SlackController@integrateWorkspace');
+Route::get('/slack/channels', 'SlackController@listChannels');
